@@ -28,6 +28,7 @@ JHtml::_('behavior.framework', true);
 <!DOCTYPE html>
 <html dir="ltr" lang="<?php echo $document->language; ?>">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <jdoc:include type="head" />
     <link rel="stylesheet" href="<?php echo $document->baseurl; ?>/templates/system/css/system.css" />
     <link rel="stylesheet" href="<?php echo $document->baseurl; ?>/templates/system/css/general.css" />
@@ -100,9 +101,11 @@ JHtml::_('behavior.framework', true);
 <?php endif; ?>
 <div class="art-sheet clearfix">
 
+  <div class="row">
+
             <?php echo $view->position('banner1', 'art-nostyle'); ?>
 <?php echo $view->positions(array('top1' => 33, 'top2' => 33, 'top3' => 34), 'art-block'); ?>
-<div class="art-layout-wrapper">
+<div class="art-layout-wrapper ">
                 <div class="art-content-layout">
                     <div class="art-content-layout-row">
                         <?php if ($view->containsModules('left')) : ?>
@@ -148,7 +151,7 @@ JHtml::_('behavior.framework', true);
 
 </div>
 
-    
+</div> <!--END OF BOOTSTRAP ROW -->    
 </div>
 
 
@@ -158,7 +161,7 @@ JHtml::_('behavior.framework', true);
 
 <footer class="art-footer">
 <?php if ($view->containsModules('copyright')) : ?>
-    <div class="copyright"><?php echo $view->position('copyright', 'art-nostyle'); ?></a>
+    <div class="copyright"><?php echo $view->position('copyright', 'art-nostyle'); ?></div>
 <?php else: ?>
 <a title="RSS" class="art-rss-tag-icon" style="position:absolute;bottom:25px;left:6px" href="#"></a><div style="position:relative;padding-left:48px;padding-right:10px"><p><a href="#">Link1</a> | <a href="#">Link2</a> | <a href="#">Link3</a></p><p>Copyright © 2014. All Rights Reserved.</p></div>
     <?php endif; ?>
